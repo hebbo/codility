@@ -17,7 +17,7 @@
 
 class Demo
   def solution(list)
-    raise 'not a list of integers' unless list.is_a?(Array)
+    raise "not a list of integers" unless list.is_a?(Array)
 
     search(1, list.sort)
   end
