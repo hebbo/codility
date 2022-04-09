@@ -30,3 +30,6 @@ Metrics/BlockLength:
 
 Style/NumericPredicate:
   Enabled: false
+
+Style/SlicingWithRange:
+  Enabled: false
