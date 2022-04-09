@@ -33,3 +33,9 @@ Style/NumericPredicate:
 
 Style/SlicingWithRange:
   Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
