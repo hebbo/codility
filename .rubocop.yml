@@ -21,3 +21,12 @@ Style/Documentation:
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
