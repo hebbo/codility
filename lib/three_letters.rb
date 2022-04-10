@@ -10,17 +10,15 @@ class ThreeLetters
     results = []
 
     if a > 0
-      results +=
-        build_tree(a - 1, b)
-        .reject { |subresult| subresult.slice(0..1) == "aa" }
-        .map { |subresult| subresult.prepend("a") }
+      build_tree(a - 1, b).each do |subresult|
+        results.push(subresult.prepend("a")) unless subresult.start_with?("aa")
+      end
     end
 
     if b > 0
-      results +=
-        build_tree(a, b - 1)
-        .reject { |subresult| subresult.slice(0..1) == "bb" }
-        .map { |subresult| subresult.prepend("b") }
+      build_tree(a, b - 1).each do |subresult|
+        results.push(subresult.prepend("b")) unless subresult.start_with?("bb")
+      end
     end
 
     results
