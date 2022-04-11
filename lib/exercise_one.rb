@@ -6,10 +6,11 @@
 
 class ExerciseOne
   def solution(message, k)
-    return "" if k <= 0
-    return message if k == message.length
-    return solution(message.slice(0, k), k - 1) if message[k] != " "
+    right_stripped_message = message.rstrip
 
-    message.slice(0, k)
+    return right_stripped_message if k == right_stripped_message.length
+    return solution(right_stripped_message.slice(0, k), k - 1) if right_stripped_message[k] != " "
+
+    right_stripped_message.slice(0, k)
   end
 end
