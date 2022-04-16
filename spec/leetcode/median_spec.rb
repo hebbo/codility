@@ -1,16 +1,25 @@
-require "exercise_one"
+require "leetcode/median"
 
-describe ExerciseOne do
+describe Median do
   it "case" do
-    expect(described_class.new.solution("Codility We test coders", 14)).to eq("Codility We")
-    expect(described_class.new.solution("Why not", 100)).to eq("Why not")
-    expect(described_class.new.solution("The quick brown fox jumps over the lazy dog",
-                                        39)).to eq("The quick brown fox jumps over the lazy")
-    expect(described_class.new.solution("To crop or not to crop", 21)).to eq("To crop or not to")
+    expect(described_class.new.find_median_sorted_arrays(
+             [1, 2],
+             [3, 4]
+           )).to eq(2.5)
 
-    # my test cases
-    expect(described_class.new.solution("Why not    ", 100)).to eq("Why not")
-    expect(described_class.new.solution("Why not", 7)).to eq("Why not")
-    expect(described_class.new.solution("Why not", 6)).to eq("Why")
+    expect(described_class.new.find_median_sorted_arrays(
+             [1, 3],
+             [2]
+           )).to eq(2)
+
+    expect(described_class.new.find_median_sorted_arrays(
+             [2],
+             []
+           )).to eq(2)
+
+    expect(described_class.new.find_median_sorted_arrays(
+             [3, 16, 18, 19, 22, 23, 28, 31, 39, 42, 49, 68, 71, 72, 76, 81, 85, 87, 92, 94],
+             [8, 10, 29, 30, 31, 33, 36, 44, 46, 50, 76, 81, 90, 91, 97]
+           )).to eq(44)
   end
 end
