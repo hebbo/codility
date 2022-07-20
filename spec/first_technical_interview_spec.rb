@@ -1,6 +1,6 @@
-require "technical_interview"
+require "first_technical_interview"
 
-describe TechnicalInterview do
+describe FirstTechnicalInterview do
   it "case" do
     expect(described_class.new.carry_operations(65, 55)).to eq(2)
     expect(described_class.new.carry_operations(123, 456)).to eq(0)

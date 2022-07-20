@@ -1,5 +1,5 @@
 # count the number of curries in a sum operation between two digits
-class TechnicalInterview
+class FirstTechnicalInterview
   def carry_operations(a, b)
     recurse(a, b, 0)
   end
